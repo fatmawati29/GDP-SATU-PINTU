@@ -5,6 +5,7 @@ import matplotlib.pyplot as plt
 from fpdf import FPDF
 import base64
 import io
+from io import BytesIO
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.neighbors import NearestNeighbors
 from sklearn.model_selection import train_test_split
