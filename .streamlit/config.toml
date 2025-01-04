@@ -1,0 +1,7 @@
+[theme]
+base = "light"  # Pilihan: "light" atau "dark"
+primaryColor = "#000000"  # Warna utama (misalnya tombol dan header)
+backgroundColor = "#000000"  # Warna latar belakang
+secondaryBackgroundColor = "#000000"  # Warna latar belakang kedua
+textColor = "#FFFFFF"  # Warna teks utama
+font = "sans serif"  # Pilihan font: "sans serif", "serif", atau "monospace"
