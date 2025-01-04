@@ -12,7 +12,7 @@ from sklearn.neighbors import KNeighborsClassifier
 from sklearn.metrics import accuracy_score
 
 st.image("income.png", use_container_width=True)
-image_path = r'static\BACKGROUND InY (2).png'
+image_path = r'static/BACKGROUND InY (2).png'
 
 tab1, tab2, tab3, tab4, tab5, tab6, tab7, tab8, tab9, tab10 = st.tabs(["Teori", "CalcY", "CalSimPro", "CalSimPan", "CalSimPel", "Pendapatan Perkapita", "Distribusi Pendapatan", "Latihan Soal", "Fakta-fakta", "Referensi Bacaan"])
 def set_background(image_path):
