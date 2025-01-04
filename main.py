@@ -529,42 +529,6 @@ with tab7:
                         'Pendapatan Kumulatif': cum_income
                     })
 
-                    pdf = FPDF()
-                    pdf.add_page()
-                    pdf.set_font("Arial", size=12)
-
-                    pdf.cell(200, 10, txt="Hasil Perhitungan Koefisien Gini dan Kurva Lorenz", ln=True, align='C')
-                    pdf.ln(10)
-
-                    pdf.multi_cell(0, 10, txt=f"Koefisien Gini: {gini:.4f}\n\n")
-
-                    pdf.ln(5)
-                    pdf.cell(200, 10, txt="Data Pendapatan dan Kumulatif Pendapatan:", ln=True)
-                    pdf.ln(5)
-
-                    for i in range(len(sorted_income)):
-                        pdf.cell(95, 10, txt=f"Pendapatan: {sorted_income[i]}", border=1)
-                        pdf.cell(95, 10, txt=f"Kumulatif Pendapatan: {cum_income[i]}", border=1)
-                        pdf.ln()
-
-                    img_path = "kurva_lorenz.png"
-                    img_buf.seek(0)
-                    with open(img_path, "wb") as img_file:
-                        img_file.write(img_buf.read())
-                    pdf.ln(5)
-                    pdf.image(img_path, x=10, w=190)
-
-                    pdf_output = io.BytesIO()
-                    pdf.output(pdf_output)
-                    pdf_output.seek(0)
-
-                    st.download_button(
-                        label="Unduh Hasil Simulasi",
-                        data=pdf_output,
-                        file_name="Hasil Simulasi Kurva Lorenz.pdf",
-                        mime="application/pdf"
-                    )
-
             except ValueError:
                 st.error("Tolong masukkan angka yang valid.")
         else:
