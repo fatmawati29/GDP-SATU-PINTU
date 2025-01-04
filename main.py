@@ -524,11 +524,6 @@ with tab7:
                     - Nilai Gini = 1 menunjukkan ketimpangan maksimal (satu orang memiliki semua pendapatan).
                     """)
 
-                    df = pd.DataFrame({
-                        'Pendapatan': sorted_income,
-                        'Pendapatan Kumulatif': cum_income
-                    })
-
             except ValueError:
                 st.error("Tolong masukkan angka yang valid.")
         else:
